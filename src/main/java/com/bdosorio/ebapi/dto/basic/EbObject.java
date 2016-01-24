@@ -19,4 +19,5 @@ public class EbObject {
     public void setId(String id) {
         this.id = id;
     }
+
 }

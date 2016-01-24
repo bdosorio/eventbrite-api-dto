@@ -40,4 +40,20 @@ public class EbVenue extends EbObject {
     public void setAddress(EbAddress address) {
         this.address = address;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        EbVenue ebVenue = (EbVenue) o;
+
+        return getId() != null ? getId().equals(ebVenue.getId()) : ebVenue.getId() == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return getId() != null ? getId().hashCode() : 0;
+    }
 }
